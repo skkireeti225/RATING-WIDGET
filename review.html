@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <style media="screen">
+    .numRating {
+display        : inline-block;
+position       : relative;
+height         : 24px;
+background     : url('icon_number_widget.png') no-repeat 0 0;
+vertical-align : bottom;
+}
+
+.numRating div {
+float    : left;
+position : relative;
+height   : 24px;
+}
+
+.numRating input {
+position : relative;
+z-index  : 1;
+width    : 24px;
+height   : 24px;
+margin   : 0;
+padding  : 0;
+opacity  : 0;
+}
+
+.numRating label {
+position : absolute;
+top      : 0;
+left     : 0;
+width    : 100%;
+height   : 24px;
+}
+
+.numRating span {
+display : none;
+}
+
+.numRating       input:checked       + label,
+.numRating:hover input:checked:hover + label {
+background : url('icon_number_widget.png') repeat-x 0 -24px;
+}
+
+.numRating:hover input:checked + label {
+background : transparent;
+}
+
+.numRating:hover input:hover + label {
+background : url('icon_number_widget.png') repeat-x 0 -48px;
+}
+    </style>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="numRating">
+  <div>
+    <div>
+      <div>
+        <div>
+          <input id="rating1" type="radio" name="rating" value="1">
+          <label for="rating1"><span>1</span></label>
+        </div>
+        <input id="rating2" type="radio" name="rating" value="2">
+        <label for="rating2"><span>2</span></label>
+      </div>
+      <input id="rating3" type="radio" name="rating" value="3" checked>
+      <label for="rating3"><span>3</span></label>
+    </div>
+    <input id="rating4" type="radio" name="rating" value="4">
+    <label for="rating4"><span>4</span></label>
+  </div>
+  <input id="rating5" type="radio" name="rating" value="5">
+  <label for="rating5"><span>5</span></label>
+</div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
